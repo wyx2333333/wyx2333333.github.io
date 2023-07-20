@@ -14,6 +14,7 @@ module.exports = {
   darkMode: "class",
 };
 ```
+
 {: file='tailwind.config.js'}
 
 ### className 中直接添加样式 (生效)
@@ -44,6 +45,7 @@ import "./index.scss";
   @apply dark:bg-black;
 }
 ```
+
 {: file='./index.scss'}
 
 查看元素发现生效样式
@@ -68,10 +70,19 @@ import style from "./index.module.scss";
   @apply dark:bg-black;
 }
 ```
+
 {: file='./index.module.scss'}
 
-> 运行发现因为 module 作用域的原因，从而导致 dark mode 全局样式没有生效
-{: .prompt-info }
+查看元素发现编译后的样式
+
+> 因为 module 作用域的原因，从而导致 dark mode 全局样式没有生效
+
+```css
+:is(._dark_rfi4e_1 ._bg_rfi4e_1) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+```
 
 ## 解决方案: 添加 class 属性选择器
 
@@ -84,6 +95,7 @@ module.exports = {
   darkMode: ["class", '[class="dark"]'],
 };
 ```
+
 {: file='tailwind.config.js'}
 
 ### className 中直接添加样式 (生效)

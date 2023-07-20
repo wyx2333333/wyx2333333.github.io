@@ -4,4 +4,4 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![Desktop View](/assets/img/LBJ.jpeg)
+![](/assets/img/LBJ.jpeg)
