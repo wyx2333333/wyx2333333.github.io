@@ -1,3 +1,3 @@
-## Welcome to my [blog](https://wyx2333333.github.io/) ! 👋
+## Welcome to my [blog](https://wyx.cool) ! 👋
 
 ![](./assets/img/FCSX.jpg)
