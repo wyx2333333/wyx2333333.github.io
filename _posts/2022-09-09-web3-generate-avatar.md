@@ -11,9 +11,9 @@ tags: [Web3]
 
 ```bash
 npm i @download/blockies
-or
+# or
 yarn add @download/blockies
-or
+# or
 pnpm add @download/blockies
 ```
 
@@ -70,10 +70,10 @@ export default BlockieAvatar;
 ```bash
 npm i color mersenne-twister
 npm i @types/color @types/mersenne-twister -D
-or
+# or
 yarn add color mersenne-twister
 yarn add @types/color @types/mersenne-twister -D
-or
+# or
 pnpm add color mersenne-twister
 pnpm add @types/color @types/mersenne-twister -D
 ```
