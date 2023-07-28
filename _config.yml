@@ -28,6 +28,8 @@ description: >- # used by seo meta and the atom feed
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://wyx2333333.github.io"
 
+beian: 苏ICP备2023023197号-1
+
 github:
   username: wyx2333333 # change to your github username
 

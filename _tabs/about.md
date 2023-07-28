@@ -4,4 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![](/assets/img/LBJ.jpeg)
+## Welcome to my [blog](https://wyx.cool) ! 👋
+
+![](/assets/img/FCSX.jpg)
