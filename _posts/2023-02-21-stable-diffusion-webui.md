@@ -99,29 +99,20 @@ export COMMANDLINE_ARGS="--medvram --opt-split-attention --skip-torch-cuda-test 
 ./webui.sh
 ```
 
-> 如果仍然报错 install gfpgan 失败，注释/modules/launch_utils.py 文件 319 和 320 行代码 (前提是前面安装依赖包全部安装成功)，然后重新执行`./webui.sh`
-
-{: file='/modules/launch_utils.py'}
-
-```python
-    # if not is_installed("gfpgan"):
-    #     run_pip(f"install {gfpgan_package}", "gfpgan")
-```
-
 ## 下载模型文件
 
 [模型下载地址](/posts/websites/)
 
 ### Checkpoint 模型
 
-- SD 绘图的基础模型 (大模型/底模型/主模型)，不同的主模型画风不同，生成的图片耶完全不同。
-- 通常为 ckpt、safetensors 后缀，文件较大，为 2-7G。
+- SD 绘图的基础模型 (大模型/底模型/主模型)，不同的主模型画风不同，生成的图片也完全不同。
+- 通常以 ckpt、safetensors 后缀，文件较大，一般为 2-7G 不等。
 - 存放位置: models/Stable-diffusion
 
 ### LoRA 模型
 
 - 微调模型，必须与主模型一起使用。
-- 通常为 ckpt、safetensors、pt 后缀，文件较小，为 10-300M 不等。
+- 通常以 ckpt、safetensors、pt 后缀，文件较小，一般为 10-300M 不等。
 - 存放位置: models/Lora
 
 ### VAE 模型
