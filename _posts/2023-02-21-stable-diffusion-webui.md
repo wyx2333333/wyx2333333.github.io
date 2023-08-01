@@ -2,7 +2,7 @@
 title: Mac部署 Stable Diffusion Webui
 date: 2023-02-21 16:52:28 +0800
 categories: [AIGC]
-tags: [AIGC]
+tags: [AIGC, Stable Diffusion Webui]
 ---
 
 ## 安装 anaconda
