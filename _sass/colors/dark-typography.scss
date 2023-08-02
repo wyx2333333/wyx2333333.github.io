@@ -3,6 +3,15 @@
  */
 
 @mixin dark-scheme {
+  /* Waline */
+  --waline-theme-color: #8ab4f8;
+  --waline-active-color: #b8d5ff;
+
+  .wl-like svg path,
+  .wl-delete svg path {
+    fill: #cd0202 !important;
+  }
+
   /* Framework color */
   --main-bg: rgb(27, 27, 30);
   --mask-bg: rgb(68, 69, 70);

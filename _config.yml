@@ -84,10 +84,10 @@ avatar: "assets/img/avatar.png"
 toc: true
 
 comments:
-  active: "disqus" # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: waline # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   disqus:
-    shortname: "disqus_F5uG9fiFNg" # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+    shortname: wyx2333333 # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
     repo: # <gh-username>/<repo>
@@ -102,6 +102,8 @@ comments:
     input_position: # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
+  waline:
+    serverURL: https://blog-waline-git-main-wyx2333333.vercel.app/
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:

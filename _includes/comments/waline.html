@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline-meta.css" />
+
+<div id="waline" class="pt-2 pb-2"></div>
+
+
+<script type="module">
+  import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+  init({
+    el: '#waline',
+    dark: 'html:not([data-mode]), html[data-mode=dark]',
+    serverURL: '{{ site.comments.waline.serverURL }}',
+    emoji: [
+      '//unpkg.com/@waline/emojis@1.2.0/alus',
+      '//unpkg.com/@waline/emojis@1.2.0/bilibili',
+      '//unpkg.com/@waline/emojis@1.2.0/bmoji',
+      '//unpkg.com/@waline/emojis@1.2.0/qq',
+      '//unpkg.com/@waline/emojis@1.2.0/tieba',
+      '//unpkg.com/@waline/emojis@1.2.0/tw-emoji',
+      '//unpkg.com/@waline/emojis@1.2.0/weibo',
+      '//unpkg.com/@waline/emojis@1.2.0/soul-emoji',
+    ]
+  });
+</script>

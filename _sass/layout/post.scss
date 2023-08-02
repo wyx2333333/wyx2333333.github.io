@@ -415,3 +415,38 @@ h1 + .post-meta {
     border-radius: 0;
   }
 }
+
+/* waline */
+.wl-power {
+  display: none !important;
+}
+
+.wl-panel {
+  margin: 0 !important;
+  border-radius: 0.5rem !important;
+}
+
+.wl-header {
+  border-top-left-radius: 0.5rem !important;
+  border-top-right-radius: 0.5rem !important;
+}
+
+.wl-login-info {
+  margin-top: 0 !important;
+  margin-right: 0.75em;
+}
+
+#waline * {
+  border-color: var(--main-border-color) !important;
+  border-inline-color: var(--main-border-color) !important;
+}
+
+.wl-editor:focus,
+.wl-input:focus {
+  background: transparent !important;
+}
+
+.wl-like svg path,
+.wl-delete svg path {
+  fill: #df3c30 !important;
+}

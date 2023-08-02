@@ -3,6 +3,10 @@
  */
 
 @mixin light-scheme {
+  /* Waline */
+  --waline-theme-color: #0153ab;
+  --waline-active-color: #1f6eb8;
+
   /* Framework color */
   --main-bg: white;
   --mask-bg: #c1c3c5;
