@@ -91,8 +91,10 @@
     }
 
     setSysTheme () {
-      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE);
+      var mode = this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE
 
+      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, mode);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, mode);
     }
 
     setDark () {
