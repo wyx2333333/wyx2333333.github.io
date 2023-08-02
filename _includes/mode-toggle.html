@@ -19,42 +19,7 @@
     }
 
     constructor() {
-      if (this.hasMode) {
-        if (this.isDarkMode) {
-          if (!this.isSysDarkPrefer) {
-            this.setDark();
-          }
-        } else {
-          if (this.isSysDarkPrefer) {
-            this.setLight();
-          }
-        }
-      } else {
-        this.setSysTheme()
-      }
-
-      let self = this;
-
-      /* always follow the system prefers */
-      this.sysDarkPrefers.addEventListener('change', () => {
-        self.clearMode()
-        self.setSysTheme()
-
-        // if (self.hasMode) {
-        //   if (self.isDarkMode) {
-        //     if (!self.isSysDarkPrefer) {
-        //       self.setDark();
-        //     }
-        //   } else {
-        //     if (self.isSysDarkPrefer) {
-        //       self.setLight();
-        //     }
-        //   }
-
-        //   self.clearMode();
-
-        self.notify();
-      });
+      this.setTheme()
     } /* constructor() */
 
     get sysDarkPrefers () {
@@ -83,15 +48,18 @@
 
     /* get the current mode on screen */
     get modeStatus () {
-      if (this.isDarkMode || (!this.hasMode && this.isSysDarkPrefer)) {
-        return ModeToggle.DARK_MODE;
-      } else {
-        return ModeToggle.LIGHT_MODE;
-      }
+      return this.mode || (this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE)
     }
 
-    setSysTheme () {
-      var mode = this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE
+    setTheme () {
+      var mode = this.mode || (this.isSysDarkPrefer ? ModeToggle.DARK_MODE : ModeToggle.LIGHT_MODE)
+
+      document.documentElement.setAttribute(ModeToggle.MODE_ATTR, mode);
+      sessionStorage.setItem(ModeToggle.MODE_KEY, mode);
+    }
+
+    toggleTheme () {
+      var mode = this.isDarkMode ? ModeToggle.LIGHT_MODE : ModeToggle.DARK_MODE
 
       document.documentElement.setAttribute(ModeToggle.MODE_ATTR, mode);
       sessionStorage.setItem(ModeToggle.MODE_KEY, mode);
@@ -124,27 +92,7 @@
     }
 
     flipMode () {
-      if (this.hasMode) {
-        if (this.isSysDarkPrefer) {
-          if (this.isLightMode) {
-            this.clearMode();
-          } else {
-            this.setLight();
-          }
-        } else {
-          if (this.isDarkMode) {
-            this.clearMode();
-          } else {
-            this.setDark();
-          }
-        }
-      } else {
-        if (this.isSysDarkPrefer) {
-          this.setLight();
-        } else {
-          this.setDark();
-        }
-      }
+      this.toggleTheme()
 
       this.notify();
     } /* flipMode() */
