@@ -14,7 +14,15 @@ tags: [AIGC, Stable Diffusion Webui]
 - 安装完成后切换到`Installed`标签页
 - 点击`Apply and restart UI`按钮激活插件
 
-## 双语对照翻译插件
+## Lobe 主题插件
+
+Git 地址: [https://github.com/canisminor1990/sd-webui-lobe-theme](https://github.com/canisminor1990/sd-webui-lobe-theme)
+
+## 简体中文翻译插件
+
+Git 地址: [https://github.com/dtlnor/stable-diffusion-webui-localization-zh_CN](https://github.com/dtlnor/stable-diffusion-webui-localization-zh_CN)
+
+## 双语对照翻译插件 (需安装简体中文翻译插件)
 
 Git 地址: [https://github.com/journey-ad/sd-webui-bilingual-localization](https://github.com/journey-ad/sd-webui-bilingual-localization)
 
