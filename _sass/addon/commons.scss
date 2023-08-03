@@ -1199,6 +1199,7 @@ $btn-mb: 0.5rem;
       transform: translateX(-50%);
       -webkit-animation: popup 0.8s;
       animation: popup 0.8s;
+      z-index: 99;
     }
   }
 }
