@@ -3,7 +3,7 @@
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
 
 <script>
-  var PARTICLES_OPACITY = 0.25
+  var PARTICLES_OPACITY = 0.25;
 
   var PARTICLES_OPTIONS = {
     autoPlay: true,
@@ -61,12 +61,12 @@
       }
     },
     detectRetina: true
-  }
+  };
 
   tsParticles.load({
     id: "tsparticles",
-    options: PARTICLES_OPTIONS,
-  })
+    options: PARTICLES_OPTIONS
+  });
 
   addEventListener('message', (event) => {
     if (
@@ -76,13 +76,13 @@
     ) {
       /* global theme mode changed */
       const mode = event.data.message;
-      PARTICLES_OPTIONS.background.color.value = mode === ModeToggle.DARK_MODE ? '#1b1b1e' : '#fff'
+      PARTICLES_OPTIONS.background.color.value = mode === ModeToggle.DARK_MODE ? '#1b1b1e' : '#fff';
 
       tsParticles.load({
         id: "tsparticles",
-        options: PARTICLES_OPTIONS,
-      })
+        options: PARTICLES_OPTIONS
+      });
     }
-  })
+  });
 
 </script>
