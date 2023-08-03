@@ -1107,6 +1107,11 @@ $btn-mb: 0.5rem;
   min-height: calc(100vh - $footer-height-mobile);
 
   @include pl-pr(0);
+
+  #main {
+    position: relative;
+    z-index: 99;
+  }
 }
 
 #topbar-wrapper.row,
