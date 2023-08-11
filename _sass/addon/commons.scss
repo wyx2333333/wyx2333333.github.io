@@ -173,6 +173,8 @@ kbd {
 }
 
 footer {
+  position: relative;
+  z-index: 6;
   font-size: 0.8rem;
   background-color: var(--main-bg);
 
